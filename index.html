@@ -210,33 +210,86 @@
     <div class="footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <div class="footer-col first">
                         <h4>About FloCreative</h4>
                         <p class="p-small">We're passionate about designing, developing and marketing, simple as that!</p>
                     </div>
+                    
+                        <div class="footer-col first">
+                            <h4>Important Links</h4>
+                            <ul class="list-unstyled li-space-lg p-small">
+                                <li class="media">
+                                    <div class="media-body">Read our <a class="white" href="terms-conditions.html">Terms & Conditions</a>, <a class="white" href="privacy-policy.html">Privacy Policy</a></div>
+                                </li>
+                            </ul>
+                        </div>
                 </div> <!-- end of col -->
-                <div class="col-md-4">
-                    <div class="footer-col middle">
-                        <h4>Important Links</h4>
-                        <ul class="list-unstyled li-space-lg p-small">
-                            <li class="media">
-                                <div class="media-body">Read our <a class="white" href="terms-conditions.html">Terms & Conditions</a>, <a class="white" href="privacy-policy.html">Privacy Policy</a></div>
-                            </li>
-                        </ul>
-                    </div>
-                </div> <!-- end of col -->
-                <div class="col-md-4">
+                
+                <div class="col-md-6">
                     <div class="footer-col last">
                         <h4>Contact</h4>
                         <ul class="list-unstyled li-space-lg p-small">
                             <li class="media">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div class="media-body">22 Innovative, San Francisco, CA 94043, US</div>
-                            </li>
-                            <li class="media">
-                                <i class="fas fa-envelope"></i>
-                                <div class="media-body"><a class="white" href="mailto:cindylky@hotmail.com">cindylky@hotmail.com</a></div>
+                                <form id="contact-form" method="post" action="contact.php" role="form">
+
+                                    <div class="messages"></div>
+                                
+                                    <div class="controls">
+                                
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_name">Firstname *</label>
+                                                    <input id="form_name" type="text" name="name" class="form-control" required="required" data-error="Firstname is required.">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_lastname">Lastname *</label>
+                                                    <input id="form_lastname" type="text" name="surname" class="form-control" required="required" data-error="Lastname is required.">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_email">Email *</label>
+                                                    <input id="form_email" type="email" name="email" class="form-control" required="required" data-error="Valid email is required.">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_need">Objective *</label>
+                                                    <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                                                        <option value=""></option>
+                                                        <option value="Request quotation">Request quotation</option>
+                                                        <option value="Request order status">Request order status</option>
+                                                        <option value="Request copy of an invoice">Request copy of an invoice</option>
+                                                        <option value="Other">Other</option>
+                                                    </select>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="form_message">Message *</label>
+                                                    <textarea id="form_message" name="message" class="form-control" placeholder="How can we help?" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <input type="submit" class="btn btn-success btn-send" value="Send message">
+                                            </div>
+                                        </div>
+                                    </div>
+                                
+                                </form>
                             </li>
                         </ul>
                     </div> 
